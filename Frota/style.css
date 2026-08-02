@@ -6,13 +6,51 @@
 
 :root {
   --container: 760px;
-    --accent: #0f1720;
-    --muted: #9aa0a6;
-    --card-border: #e6e9ec;
-    --btn-bg: #15202b;
-    --btn-color: #fff;
-    --gap: 24px;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --accent: #0f1720;
+  --muted: #9aa0a6;
+  --text: #111316;
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --surface-muted: rgba(17, 29, 47, 0.08);
+  --border: rgba(17, 19, 22, 0.08);
+  --card-shadow: 0 20px 50px rgba(17, 19, 22, 0.04);
+  --btn-bg: #15202b;
+  --btn-color: #fff;
+  --gap: 24px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.theme-root {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#theme-toggle:checked ~ .theme-root {
+  --bg: #0d1119;
+  --surface: #131a2b;
+  --surface-strong: rgba(17, 24, 38, 0.95);
+  --surface-muted: rgba(255, 255, 255, 0.08);
+  --text: #f5f7fb;
+  --muted: #a0adc0;
+  --border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  --btn-bg: #dbe5ff;
+  --btn-color: #0d1119;
+}
+
+#theme-toggle:checked ~ .theme-root .button[for="theme-toggle"]::after,
+#theme-toggle:not(:checked) ~ .theme-root .button[for="theme-toggle"]::after {
+  display: inline-block;
+}
+
+#theme-toggle:not(:checked) ~ .theme-root .button[for="theme-toggle"]::after {
+  content: "Modo escuro";
+}
+
+#theme-toggle:checked ~ .theme-root .button[for="theme-toggle"]::after {
+  content: "Modo claro";
 }
 
 html,
@@ -21,7 +59,7 @@ body {
 }
 
 body {
-  background: #f7f9fb;
+  background: var(--bg);
 }
 
 img {
@@ -39,9 +77,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--surface-strong);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(17, 19, 22, 0.08);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-inner {
@@ -57,7 +95,7 @@ img {
   letter-spacing: 0.35em;
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #111316;
+  color: var(--text);
 }
 
 .main-nav {
@@ -76,11 +114,11 @@ img {
 .main-nav a {
   font-size: 0.85rem;
   letter-spacing: 0.08em;
-  color: #48515e;
+  color: var(--muted);
 }
 
 .main-nav a.active {
-  color: #151d2f;
+  color: var(--text);
   font-weight: 700;
 }
 
@@ -104,13 +142,14 @@ img {
 }
 
 .button-primary {
-  background: #151d2f;
-  color: #fff;
+  background: var(--primary);
+  color: var(--primary-contrast);
 }
 
 .button-tertiary {
-  background: rgba(21, 29, 47, 0.08);
-  color: #151d2f;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .hero-section {
@@ -165,9 +204,9 @@ img {
 .fleet-card {
   padding: 2rem;
   border-radius: 1rem;
-  background: #fff;
-  border: 1px solid rgba(17, 19, 22, 0.08);
-  box-shadow: 0 20px 50px rgba(17, 19, 22, 0.04);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
 }
 
 .fleet-card-header {
@@ -183,7 +222,7 @@ img {
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #5d6b7f;
+  color: var(--muted);
 }
 
 .fleet-card h2 {
@@ -193,7 +232,7 @@ img {
 
 .fleet-subtitle {
   margin: 0.5rem 0 0;
-  color: #6c7384;
+  color: var(--muted);
 }
 
 .fleet-badge {
@@ -201,14 +240,14 @@ img {
   align-items: center;
   padding: 0.45rem 0.85rem;
   border-radius: 999px;
-  background: rgba(21, 29, 47, 0.06);
-  color: #151d2f;
+  background: var(--surface-muted);
+  color: var(--text);
   font-size: 0.75rem;
   font-weight: 700;
 }
 
 .fleet-description {
-  color: #505a68;
+  color: var(--muted);
   margin-bottom: 1.5rem;
 }
 
@@ -226,7 +265,7 @@ img {
 }
 
 .fleet-stats span {
-  color: #6c7384;
+  color: var(--muted);
   font-size: 0.85rem;
 }
 
@@ -243,7 +282,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  color: #5d6b7f;
+  color: var(--muted);
 }
 
 .stats {
@@ -254,7 +293,7 @@ img {
 
 .stats strong {
   display: block;
-  color: #151d2f;
+  color: var(--text);
   margin-bottom: 0.35rem;
 }
 
@@ -265,7 +304,7 @@ img {
 }
 
 .footer-links a {
-  color: #5d6b7f;
+  color: var(--muted);
   font-size: 0.85rem;
 }
 

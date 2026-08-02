@@ -241,6 +241,120 @@ img {
   max-width: 42rem;
 }
 
+.destino-grid {
+   display: grid;
+   grid-template-columns: minmax(0, 0.65fr) minmax(0, 0.35fr);
+   gap: 2rem;
+   row-gap: 2.5rem;
+   align-items: start;
+ }
+ 
+ .destino-switcher {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.destino-media {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.destino-switcher-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.destino-switcher .button-tertiary {
+  min-width: 10rem;
+  padding: 0.75rem 1rem;
+}
+
+.destino-view {
+  position: relative;
+  min-height: 26rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+.destino-slide {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  display: grid;
+  align-items: end;
+  justify-items: start;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.destino-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 100%);
+  z-index: 1;
+}
+
+.destino-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+
+.destino-slide-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 28rem;
+}
+
+.destino-slide .destino-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.destino-slide span,
+.destino-slide p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#destino-stmoritz:checked ~ .destino-view .slide-stmoritz,
+#destino-amalfi:checked ~ .destino-view .slide-amalfi,
+#destino-mustique:checked ~ .destino-view .slide-mustique {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.destino-switcher-buttons label {
+  cursor: pointer;
+}
+
+#destino-stmoritz:checked ~ .destino-switcher-buttons label[for="destino-stmoritz"],
+#destino-amalfi:checked ~ .destino-switcher-buttons label[for="destino-amalfi"],
+#destino-mustique:checked ~ .destino-switcher-buttons label[for="destino-mustique"] {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+
 .hero-panel {
   padding: 2rem;
   border: 1px solid var(--border);

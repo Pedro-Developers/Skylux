@@ -138,30 +138,41 @@
         <div class="destino-copy">
           <span class="label label-light">Curadoria de Destinos</span>
           <h2>Sem Fronteiras</h2>
-          <div class="destino-list">
-            <div>
+          <div class="destino-switcher">
+          <input type="radio" id="destino-stmoritz" name="destino" checked hidden>
+          <input type="radio" id="destino-amalfi" name="destino" hidden>
+          <input type="radio" id="destino-mustique" name="destino" hidden>
+
+          <div class="destino-switcher-buttons">
+            <label for="destino-stmoritz" class="button button-tertiary">St. Moritz</label>
+            <label for="destino-amalfi" class="button button-tertiary">Amalfi</label>
+            <label for="destino-mustique" class="button button-tertiary">Mustique</label>
+          </div>
+
+          <div class="destino-view">
+            <div class="destino-slide slide-stmoritz">
               <img src="/Imagens/st-moritz.jpg" alt="Saint Moritz">
-              <p class="destino-title">Retiro de Inverno em St. Moritz</p>
-              <span>Desde R$ 245k</span>
+              <div class="destino-slide-copy">
+                <p class="destino-title">Retiro de Inverno em St. Moritz</p>
+                <span>Desde R$ 245k</span>
+              </div>
             </div>
-            <div>
+            <div class="destino-slide slide-amalfi">
               <img src="/Imagens/Amalfi.avif" alt="Costa Amalfi">
-              <p class="destino-title">Verão Privativo em Amalfi</p>
-              <span>Desde R$ 312k</span>
+              <div class="destino-slide-copy">
+                <p class="destino-title">Verão Privativo em Amalfi</p>
+                <span>Desde R$ 312k</span>
+              </div>
             </div>
-            <div>
+            <div class="destino-slide slide-mustique">
               <img src="/Imagens/Ilha_de_Mustique.jpg" alt="Mustique">
-              <p class="destino-title">Ilha Exclusiva em Mustique</p>
-              <span>Desde R$ 189k</span>
-            </div>
-            <div>
-              <img src="/Imagens/Overwater_Bora_Bora.jpeg" alt="Bora Bora">
-              <p class="destino-title">Overwater em Bora Bora</p>
-              <span>Desde R$ 274k</span>
+              <div class="destino-slide-copy">
+                <p class="destino-title">Ilha Exclusiva em Mustique</p>
+                <span>Desde R$ 189k</span>
+              </div>
             </div>
           </div>
         </div>
-
         <div class="destino-media">
           <img src="/Imagens/avaliacao.png" alt="Avaliação de clientes">
           <div class="quote-card">
