@@ -1,3 +1,54 @@
+.theme-root {
+  --bg: #f7f9fb;
+  --surface: #ffffff;
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --surface-muted: rgba(21, 29, 47, 0.08);
+  --text: #111316;
+  --muted: #6c7384;
+  --muted-strong: #5d6b7f;
+  --border: rgba(17, 19, 22, 0.08);
+  --shadow: 0 24px 45px rgba(17, 19, 22, 0.05);
+  --primary: #151d2f;
+  --primary-contrast: #ffffff;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#theme-toggle:checked ~ .theme-root {
+  --bg: #0d1119;
+  --surface: #131a2b;
+  --surface-strong: rgba(17, 24, 38, 0.95);
+  --surface-muted: rgba(255, 255, 255, 0.08);
+  --text: #f5f7fb;
+  --muted: #8f98b4;
+  --muted-strong: #a0b0cf;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
+  --primary: #dbe5ff;
+  --primary-contrast: #0d1119;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#theme-toggle:checked ~ .theme-root .header-actions label[for="theme-toggle"] {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+#theme-toggle:checked ~ .theme-root .header-actions label[for="theme-toggle"]::after {
+  content: "Modo claro";
+}
+
+#theme-toggle:not(:checked) ~ .theme-root .header-actions label[for="theme-toggle"]::after {
+  content: "Modo escuro";
+}
+
+html,
+body {
+  background: transparent;
+}
+
 .aircraft-list {
   display: grid;
   gap: 1rem;
@@ -17,22 +68,32 @@
   width: 100%;
   min-height: 6.5rem;
   padding: 1.25rem 1.5rem;
-  border: 1px solid rgba(17, 19, 22, 0.08);
+  border: 1px solid var(--border);
   border-radius: 1rem;
-  background: #fff;
-  color: inherit;
+  background: var(--surface);
+  color: var(--text);
   cursor: pointer;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .aircraft-card:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 35px rgba(17, 19, 22, 0.08);
+  box-shadow: var(--shadow);
 }
 
 .aircraft-input:checked + .aircraft-card {
-  border-color: #151d2f;
+  border-color: var(--primary);
+  background: var(--surface-muted);
   box-shadow: 0 12px 30px rgba(21, 29, 47, 0.08);
+}
+
+.dark .aircraft-card {
+  border-color: var(--border);
+  background: var(--surface);
+}
+
+.dark .aircraft-input:checked + .aircraft-card {
+  background: var(--surface-muted);
 }
 
 .aircraft-meta {
@@ -55,7 +116,7 @@
 }
 
 .aircraft-meta p {
-  color: #6c7384;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
@@ -63,14 +124,28 @@
   font-weight: 700;
   font-size: 1rem;
   white-space: nowrap;
+  color: var(--primary);
 }
 
 .aircraft-disclaimer {
   margin: 0 auto 2rem;
   max-width: 760px;
-  color: #6c7384;
+  color: var(--muted);
   font-size: 0.85rem;
   text-align: center;
+}
+
+.dark .aircraft-card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.dark .aircraft-input:checked + .aircraft-card {
+  background: var(--surface-muted);
+}
+
+.dark .aircraft-card:hover {
+  box-shadow: var(--shadow);
 }
 
 .action-row {

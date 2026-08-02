@@ -7,17 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <input type="checkbox" id="theme-toggle" hidden>
+  <div class="theme-root">
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/index.html" style="text-decoration: none; color: black;">SKYLUX</a>
+      <a class="brand" href="/index.html">SKYLUX</a>
       <nav class="main-nav">
-        <a href="/Frota/frota.html">Frota</a>
-        <a href="/Destinos/destinos.html">Destinos</a>
-        <a href="/Reservar/reservar.html">Reservar</a>
+        <a href="/Frota/frota.html" style="text-decoration: none;">Frota</a>
+        <a href="/Destinos/destinos.html" style="text-decoration: none;">Destinos</a>
+        <a href="/Reservar/reservar.html" style="text-decoration: none;">Reservar</a>
       </nav>
       <div class="header-actions">
-        <a class="button button-tertiary" href="/Login/login.html">Entrar</a>
-        <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
+        <label for="theme-toggle" class="button button-tertiary" aria-label="Alternar modo escuro"></label>
+        <a class="button button-tertiary" href="/Login/login.html" style="text-decoration: none;">Entrar</a>
+        <a class="button button-primary" href="/Reservar/reservar.html" style="text-decoration: none;">Reservar</a>
       </div>
     </div>
   </header>
@@ -52,7 +55,7 @@
               <strong>4 passageiros</strong>
             </div>
           </div>
-          <a class="button button-secondary" href="/Frota/frota.html">Buscar voo</a>
+          <a class="button button-secondary" href="/Frota/frota.html" style="text-decoration: none;">Buscar voo</a>
         </div>
       </div>
 
@@ -79,7 +82,7 @@
 <section class="section" id="frota">
       <div class="container section-header">
         <h2>A Frota SkyLux</h2>
-        <a class="link-small" href="/Frota/frota.html">Ver frota completa →</a>
+        <a class="link-small" href="/Frota/frota.html" style="text-decoration: none;">Ver frota completa →</a>
       </div>
 
       <div class="fleet-grid">
@@ -216,6 +219,7 @@
         <a href="#">Segurança</a>
       </div>
     </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>

@@ -6,11 +6,13 @@
 
 :root {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111316;
+  background: #f7f9fb;
   font-size: 16px;
   line-height: 1.5;
 
   --bg: #f7f9fb;
-  --surface: #ffffff;
+  --surface: #fff;
   --surface-strong: rgba(255, 255, 255, 0.95);
   --surface-muted: rgba(21, 29, 47, 0.08);
   --text: #111316;
@@ -20,12 +22,36 @@
   --border-strong: rgba(17, 19, 22, 0.12);
   --shadow: 0 24px 45px rgba(17, 19, 22, 0.05);
   --primary: #151d2f;
-  --primary-contrast: #ffffff;
+  --primary-contrast: #fff;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #0d1119;
+  --surface: #131a2b;
+  --surface-strong: rgba(17, 24, 38, 0.95);
+  --surface-muted: rgba(255, 255, 255, 0.08);
+  --text: #f5f7fb;
+  --muted: #8f98b4;
+  --muted-strong: #a0b0cf;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
+  --primary: #dbe5ff;
+  --primary-contrast: #0d1119;
+}
+.dark .button-primary {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+.dark .button-tertiary {
+  background: var(--surface-muted);
+  color: var(--text);
 }
 
 .theme-root {
   --bg: #f7f9fb;
-  --surface: #ffffff;
+  --surface: #fff;
   --surface-strong: rgba(255, 255, 255, 0.95);
   --surface-muted: rgba(21, 29, 47, 0.08);
   --text: #111316;
@@ -35,7 +61,7 @@
   --border-strong: rgba(17, 19, 22, 0.12);
   --shadow: 0 24px 45px rgba(17, 19, 22, 0.05);
   --primary: #151d2f;
-  --primary-contrast: #ffffff;
+  --primary-contrast: #fff;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -54,6 +80,9 @@
   --shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
   --primary: #dbe5ff;
   --primary-contrast: #0d1119;
+}
+
+#theme-toggle:checked ~ .theme-root {
   background: var(--bg);
   color: var(--text);
 }
@@ -73,49 +102,15 @@
 
 html,
 body {
+  min-height: 100vh;
   background: transparent;
 }
 
-.dark {
-  color-scheme: dark;
-  --bg: #0d1119;
-  --surface: #131a2b;
-  --surface-strong: rgba(17, 24, 38, 0.95);
-  --surface-muted: rgba(255, 255, 255, 0.08);
-  --text: #f5f7fb;
-  --muted: #8f98b4;
-  --muted-strong: #a0b0cf;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.12);
-  --shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
-  --primary: #dbe5ff;
-  --primary-contrast: #0d1119;
-}
-
-.dark .button-primary {
-  background: var(--primary);
-  color: var(--primary-contrast);
-}
-.dark .button-tertiary {
-  background: var(--surface-muted);
-  color: var(--text);
-}
-
-.dark .brand {
-  color: white;
-}
-
-html,
-body {
-  min-height: 100vh;
-}
-
 html {
-  background: var(--bg);
+  /* keep default; theme-root handles visual background */
 }
 
 body {
-  background: var(--bg);
   color: var(--text);
 }
 
@@ -152,7 +147,7 @@ img {
   letter-spacing: 0.35em;
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #111316;
+  color: var(--text);
 }
 
 .main-nav {
@@ -264,6 +259,25 @@ img {
   border-radius: 1rem;
   box-shadow: var(--shadow);
   padding: 2rem;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-contrast);
+  font-size: 24px;
+}
+
+.success-text {
+  color: var(--muted);
+  max-width: 48rem;
+  margin: 0.75rem auto 1.5rem;
 }
 
 .route-grid {
@@ -381,7 +395,7 @@ img {
 
 .price {
   font-weight: 700;
-  color: #151d2f;
+  color: var(--primary);
 }
 
 .action-row {
@@ -392,10 +406,11 @@ img {
 }
 
 .confirmation-card {
-  border: 1px solid rgba(17, 19, 22, 0.08);
+  border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  background: var(--surface);
 }
 
 .confirmation-header {
@@ -423,8 +438,8 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #151d2f;
-  color: #fff;
+  background: var(--primary);
+  color: var(--primary-contrast);
   font-size: 1.2rem;
 }
 

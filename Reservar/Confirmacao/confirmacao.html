@@ -8,22 +8,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/index.html" style="text-decoration: none;">SKYLUX</a>
-      <nav class="main-nav">
-        <a href="/Frota/frota.html">Frota</a>
-        <a href="/Destinos/destinos.html">Destinos</a>
-        <a href="/Reservar/reservar.html">Reservar</a>
-      </nav>
-      <div class="header-actions">
-        <a class="button button-tertiary" href="/Login/login.html">Entrar</a>
-        <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
+    <input type="checkbox" id="theme-toggle" hidden>
+    <div class="theme-root">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="/index.html" style="text-decoration: none;">SKYLUX</a>
+          <nav class="main-nav">
+            <a href="/Frota/frota.html">Frota</a>
+            <a href="/Destinos/destinos.html">Destinos</a>
+            <a href="/Reservar/reservar.html">Reservar</a>
+          </nav>
+          <div class="header-actions">
+            <label for="theme-toggle" class="button button-tertiary" aria-label="Alternar modo escuro"></label>
+            <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
+          </div>
+        </div>
+      </header>
     <section class="section section-step">
       <div class="container step-indicator">
         <span class="step-item done">01 Rota</span>
@@ -101,10 +101,11 @@
 
         <div class="container action-row">
           <a class="button button-tertiary" href="/Reservar/Aeronave/Aeronave.html" role="button">Voltar</a>
-          <a class="button button-primary" href="/Reservar/sucesso.html" role="button">Solicitar voo</a>
+          <a class="button button-primary" href="/Reservar/Sucesso/sucesso.html" role="button">Solicitar voo</a>
         </div>
       </div>
     </section>
   </main>
+  </div>
 </body>
 </html>

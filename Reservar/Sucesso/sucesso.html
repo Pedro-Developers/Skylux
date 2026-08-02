@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <input type="checkbox" id="theme-toggle" hidden>
+  <div class="theme-root">
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/index.html" style="text-decoration: none;">SKYLUX</a>
@@ -16,6 +18,7 @@
         <a href="/Reservar/reservar.html">Reservar</a>
       </nav>
       <div class="header-actions">
+         <label for="theme-toggle" class="button button-tertiary" aria-label="Alternar modo escuro"></label>
         <a class="button button-tertiary" href="/Login/login.html">Entrar</a>
         <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
       </div>
@@ -25,9 +28,9 @@
   <main>
     <section class="section">
       <div class="container" style="text-align:center;">
-        <div style="width:64px;height:64px;margin:0 auto 1.25rem;border-radius:50%;background:#151d2f;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">✓</div>
+        <div class="success-icon">✓</div>
         <h1>Solicitação enviada</h1>
-        <p style="color:#6c7384;max-width:48rem;margin:0.75rem auto 1.5rem;">Um concierge SkyLux confirmará a disponibilidade da aeronave selecionada para o trecho solicitado em até 15 minutos.</p>
+        <p class="success-text">Um concierge SkyLux confirmará a disponibilidade da aeronave selecionada para o trecho solicitado em até 15 minutos.</p>
 
         <div class="confirmation-panel" style="max-width:640px;margin:0 auto 1.5rem;">
           <div class="confirmation-card">
@@ -53,5 +56,6 @@
       </div>
     </section>
   </main>
+  </div>
 </body>
 </html>
