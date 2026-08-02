@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação | SkyLux</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/index.html" style="text-decoration: none;">SKYLUX</a>
+      <nav class="main-nav">
+        <a href="/Frota/frota.html">Frota</a>
+        <a href="/Destinos/destinos.html">Destinos</a>
+        <a href="/Reservar/reservar.html">Reservar</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-tertiary" href="/Home/login.html">Entrar</a>
+        <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-step">
+      <div class="container step-indicator">
+        <span class="step-item done">01 Rota</span>
+        <span class="step-separator">—</span>
+        <span class="step-item done">02 Aeronave</span>
+        <span class="step-separator">—</span>
+        <span class="step-item active">03 Confirmação</span>
+      </div>
+
+      <div class="container page-title">
+        <h1>Confirme sua missão.</h1>
+      </div>
+
+      <div class="container confirmation-panel">
+        <div class="confirmation-card">
+          <div class="confirmation-header">
+            <div class="confirmation-title">
+              <span class="confirmation-badge">✈</span>
+              <div>
+                <strong>Global Excellence</strong>
+                <span>Gulfstream G650ER</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="confirmation-grid">
+            <div>
+              <span>Trecho</span>
+              <strong>São Paulo, VCP → Londres, FAB</strong>
+            </div>
+            <div>
+              <span>Data</span>
+              <strong>A definir</strong>
+            </div>
+            <div>
+              <span>Passageiros</span>
+              <strong>4</strong>
+            </div>
+            <div>
+              <span>Tempo de voo</span>
+              <strong>4.4 h</strong>
+            </div>
+            <div>
+              <span>Estimativa</span>
+              <strong>R$ 404.800</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-panel">
+          <p class="payment-heading">Forma de pagamento</p>
+
+          <div class="payment-item">
+            <input class="payment-input" type="radio" id="pay-card" name="payment" value="card" checked hidden>
+            <label class="payment-option" for="pay-card">
+              <div class="payment-details">
+                <strong>Visa Infinite</strong>
+                <span>Cartão de crédito • •••• 4417 • 09/29</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="payment-item">
+            <input class="payment-input" type="radio" id="pay-pix" name="payment" value="pix" hidden>
+            <label class="payment-option" for="pay-pix">
+              <div class="payment-details">
+                <strong>Pix corporativo</strong>
+                <span>Pix • financeiro@empresa.com.br</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <p class="payment-note">Valor estimado, sujeito à confirmação de slots, taxas aeroportuárias e catering. Nenhuma cobrança é feita nesta demonstração.</p>
+
+        <div class="container action-row">
+          <a class="button button-tertiary" href="/Reservar/Aeronave/Aeronave.html" role="button">Voltar</a>
+          <a class="button button-primary" href="/Reservar/sucesso.html" role="button">Solicitar voo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

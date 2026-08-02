@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skylux</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/index.html" style="text-decoration: none;">SKYLUX</a>
+      <nav class="main-nav">
+        <a href="/Frota/frota.html">Frota</a>
+        <a href="/Destinos/destinos.html">Destinos</a>
+        <a href="/Reservar/reservar.html">Reservar</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-tertiary" href="/Home/login.html">Entrar</a>
+        <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-step">
+      <div class="container step-indicator">
+        <span class="step-item done">01 Rota</span>
+        <span class="step-separator">—</span>
+        <span class="step-item active">02 Aeronave</span>
+        <span class="step-separator">—</span>
+        <span class="step-item">03 Confirmação</span>
+      </div>
+
+      <div class="container page-title">
+        <h1>Escolha a aeronave.</h1>
+        <p class="page-subtitle">São Paulo, VCP → Londres, FAB • 4.4 h de voo • 16 pax</p>
+      </div>
+
+      <div class="container aircraft-list">
+        <div class="aircraft-option">
+          <input class="aircraft-input" type="radio" id="aircraft-global" name="aircraft" value="global" checked hidden>
+          <label class="aircraft-card" for="aircraft-global">
+            <div class="aircraft-meta">
+              <img src="/Imagens/Captura de tela 2026-08-02 103123.png" alt="Global Excellence">
+              <div>
+                <h2>Global Excellence</h2>
+                <p>Gulfstream G650ER • 16 lugares • ETA 45 min</p>
+              </div>
+            </div>
+            <span class="price">R$ 404.800</span>
+          </label>
+        </div>
+
+        <div class="aircraft-option">
+          <input class="aircraft-input" type="radio" id="aircraft-flagship" name="aircraft" value="flagship" hidden>
+          <label class="aircraft-card" for="aircraft-flagship">
+            <div class="aircraft-meta">
+              <img src="/Imagens/Captura de tela 2026-08-02 103324.png" alt="The Flagship">
+              <div>
+                <h2>The Flagship</h2>
+                <p>Global 7500 • 19 lugares • ETA 1 h 10</p>
+              </div>
+            </div>
+            <span class="price">R$ 475.200</span>
+          </label>
+        </div>
+
+        <div class="aircraft-option">
+          <input class="aircraft-input" type="radio" id="aircraft-regional" name="aircraft" value="regional" hidden>
+          <label class="aircraft-card" for="aircraft-regional">
+            <div class="aircraft-meta">
+              <img src="/Imagens/Captura de tela 2026-08-02 103547.png" alt="Regional Agility">
+              <div>
+                <h2>Regional Agility</h2>
+                <p>Challenger 350 • 10 lugares • ETA 25 min</p>
+              </div>
+            </div>
+            <span class="price">R$ 237.600</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="container aircraft-disclaimer">
+        Operadores auditados ARGUS Platinum • seguro de responsabilidade incluído.
+      </div>
+
+      <div class="container action-row">
+        <a class="button button-tertiary" href="/Reservar/reservar.html" role="button">Voltar</a>
+        <a class="button button-primary" href="/Reservar/Confirmacao/confirmacao.html" role="button">Continuar</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
