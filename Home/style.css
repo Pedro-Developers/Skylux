@@ -76,6 +76,12 @@ img {
   color: #48515e;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -92,9 +98,12 @@ img {
   color: #fff;
 }
 
+.button-tertiary {
+  background: rgba(21, 29, 47, 0.08);
+  color: #151d2f;
+}
+
 .button-secondary {
-  width: 100%;
-  margin-top: 1rem;
   background: #151d2f;
   color: #fff;
 }
@@ -192,6 +201,75 @@ img {
 
 .section {
   padding: 4rem 0;
+}
+
+.login-section {
+  padding: 6rem 0;
+}
+
+.login-panel {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 24px 65px rgba(17, 19, 22, 0.06);
+}
+
+.login-panel h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.05;
+}
+
+.login-panel p {
+  margin-bottom: 2rem;
+  color: #505a68;
+  max-width: 36rem;
+}
+
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(17, 19, 22, 0.12);
+  border-radius: 0.75rem;
+  font: inherit;
+  background: #f7f9fb;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5d6b7f;
+  font-size: 0.9rem;
+}
+
+.login-footer {
+  margin-top: 1rem;
+  color: #6c7384;
+  font-size: 0.95rem;
+}
+
+.login-footer a {
+  color: #151d2f;
 }
 
 .section-header {

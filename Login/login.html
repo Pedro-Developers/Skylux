@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | SkyLux</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/Home/index.html">SKYLUX</a>
+      <nav class="main-nav">
+        <a href="/Frota/frota.html">Frota</a>
+        <a href="/Destinos/destinos.html">Destinos</a>
+        <a href="/Reservar/reservar.html">Reservar</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-tertiary" href="/Home/login.html">Entrar</a>
+        <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <div class="container login-grid">
+        <div class="login-copy">
+          <span class="label">Acesso de membros</span>
+          <h1>Bem-vindo de volta.</h1>
+          <p>Entre com seu e-mail e senha para gerenciar reservas, solicitar assistência e acessar serviços premium da SkyLux.</p>
+        </div>
+
+        <div class="login-panel">
+          <form class="login-form">
+            <label class="field-label" for="email">E-mail</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="seu@exemplo.com" required>
+
+            <label class="field-label" for="password">Senha</label>
+            <input class="form-input" type="password" id="password" name="password" placeholder="••••••••" required>
+
+            <button class="button button-primary login-button" type="submit">Entrar</button>
+
+            <div class="login-divider">
+              <span>ou</span>
+            </div>
+
+            <button class="button button-secondary login-google" type="button">Continuar com Google</button>
+
+            <p class="login-footer">Ainda não tem conta? <a href="/Login/Cadastro/cadastro.html">Cadastre-se</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

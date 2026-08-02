@@ -1,11 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skylux</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frota | SkyLux</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/Home/index.html" style="text-decoration: none;">SKYLUX</a>
+      <nav class="main-nav">
+        <a href="/Frota/frota.html" class="active">Frota</a>
+        <a href="/Destinos/destinos.html">Destinos</a>
+        <a href="/Reservar/reservar.html">Reservar</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-tertiary" href="/Home/login.html">Entrar</a>
+        <a class="button button-primary" href="/Reservar/reservar.html">Reservar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-intro">
+        <small class="hero-meta">Frota / 42 aeronaves disponíveis globalmente</small>
+        <h1>Cada missão pede uma aeronave.</h1>
+      </div>
+    </section>
+
+    <section class="fleet-section">
+      <div class="container fleet-layout">
+        <div class="fleet-media">
+          <img src="/Imagens/Captura de tela 2026-08-02 103123.png" alt="Global Excellence">
+          <img src="/Imagens/Captura de tela 2026-08-02 103324.png" alt="The Flagship">
+          <img src="/Imagens/Captura de tela 2026-08-02 103547.png" alt="Regional Agility">
+        </div>
+
+        <div class="fleet-list">
+          <article class="fleet-card">
+            <div class="fleet-card-header">
+              <div>
+                <p class="fleet-tag">Long   Range</p>
+                <h2>Global Excellence</h2>
+                <p class="fleet-subtitle">Gulfstream G650ER</p>
+              </div>
+              <span class="fleet-badge">Long Range</span>
+            </div>
+            <p class="fleet-description">Cabine de altitude reduzida, conectividade Ka-band e alcance transatlântico sem escalas.</p>
+            <div class="fleet-stats">
+              <div>
+                <strong>13.890 km</strong>
+                <span>Alcance</span>
+              </div>
+              <div>
+                <strong>16</strong>
+                <span>Assentos</span>
+              </div>
+              <div>
+                <strong>Mach 0.9</strong>
+                <span>Velocidade</span>
+              </div>
+              <div>
+                <strong>R$ 92.000</strong>
+                <span>Hora de voo</span>
+              </div>
+            </div>
+            <a class="button button-primary fleet-button" href="/Reservar/reservar.html">Solicitar Global Excellence</a>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card-header">
+              <div>
+                <p class="fleet-tag">Ultra Heavy</p>
+                <h2>The Flagship</h2>
+                <p class="fleet-subtitle">Global 7500</p>
+              </div>
+              <span class="fleet-badge">Ultra Heavy</span>
+            </div>
+            <p class="fleet-description">Quatro ambientes independentes, suíte master privativa e cozinha completa a bordo.</p>
+            <div class="fleet-stats">
+              <div>
+                <strong>14.268 km</strong>
+                <span>Alcance</span>
+              </div>
+              <div>
+                <strong>19</strong>
+                <span>Assentos</span>
+              </div>
+              <div>
+                <strong>Mach 0.92</strong>
+                <span>Velocidade</span>
+              </div>
+              <div>
+                <strong>R$ 108.000</strong>
+                <span>Hora de voo</span>
+              </div>
+            </div>
+            <a class="button button-primary fleet-button" href="/Reservar/reservar.html">Solicitar The Flagship</a>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card-header">
+              <div>
+                <p class="fleet-tag">Super Mid</p>
+                <h2>Regional Agility</h2>
+                <p class="fleet-subtitle">Challenger 350</p>
+              </div>
+              <span class="fleet-badge">Super Mid</span>
+            </div>
+            <p class="fleet-description">O super mid-size mais requisitado do mundo para rotas regionais e voos executivos do dia.</p>
+            <div class="fleet-stats">
+              <div>
+                <strong>5.926 km</strong>
+                <span>Alcance</span>
+              </div>
+              <div>
+                <strong>10</strong>
+                <span>Assentos</span>
+              </div>
+              <div>
+                <strong>Mach 0.8</strong>
+                <span>Velocidade</span>
+              </div>
+              <div>
+                <strong>R$ 56.000</strong>
+                <span>Hora de voo</span>
+              </div>
+            </div>
+            <a class="button button-primary fleet-button" href="/Reservar/reservar.html">Solicitar Regional Agility</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="stats">
+        <div><strong>99.8%</strong><span>Disponível no ar</span></div>
+        <div><strong>ARGUS</strong><span>Platinum Rated</span></div>
+        <div><strong>24/7</strong><span>Conexão global</span></div>
+        <div><strong>5.000+</strong><span>Aeronaves verificados</span></div>
+      </div>
+      <div class="footer-links">
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Segurança</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
