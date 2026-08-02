@@ -175,9 +175,36 @@ img {
 }
 
 .route-row {
+  display: grid;
+  gap: 0.75rem;
   padding: 1rem 1.25rem;
   border: 1px solid rgba(17, 19, 22, 0.08);
   border-radius: 0.85rem;
+}
+
+.route-row input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #111316;
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.35rem 0;
+  outline: none;
+}
+
+.route-row input[type="date"] {
+  color: #111316;
+}
+
+.route-row input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.route-row input::-webkit-outer-spin-button,
+.route-row input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .route-row-split {
@@ -205,6 +232,15 @@ img {
   gap: 1rem;
 }
 
+.aircraft-option {
+  display: block;
+}
+
+.aircraft-input:checked + .aircraft-card {
+  border-color: #151d2f;
+  background: rgba(21, 29, 47, 0.04);
+}
+
 .aircraft-card {
   display: flex;
   justify-content: space-between;
@@ -214,11 +250,11 @@ img {
   border: 1px solid rgba(17, 19, 22, 0.08);
   border-radius: 0.85rem;
   background: #fff;
+  cursor: pointer;
 }
 
-.aircraft-card.selected {
-  border-color: #151d2f;
-  background: rgba(21, 29, 47, 0.04);
+.aircraft-card:hover {
+  border-color: rgba(21, 29, 47, 0.2);
 }
 
 .aircraft-meta {
@@ -320,15 +356,34 @@ img {
   margin-bottom: 1rem;
 }
 
+.payment-item {
+  display: block;
+}
+
+.payment-input:checked + .payment-option {
+  border-color: #151d2f;
+  background: rgba(21, 29, 47, 0.04);
+}
+
 .payment-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   border: 1px solid rgba(17, 19, 22, 0.08);
   border-radius: 0.85rem;
   padding: 1rem 1.25rem;
   background: #fff;
+  cursor: pointer;
 }
 
-.payment-option.selected {
-  border-color: #151d2f;
+.payment-option:hover {
+  border-color: rgba(21, 29, 47, 0.18);
+}
+
+.payment-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .payment-option strong {
