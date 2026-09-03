@@ -315,7 +315,16 @@ img {
   }
 
   .main-nav {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .main-nav a {
+    padding: 0.5rem 0.65rem;
+    background: var(--surface-muted);
+    border-radius: 0.35rem;
   }
 }
 
@@ -336,5 +345,20 @@ img {
   .header-actions {
     width: 100%;
     justify-content: center;
+  }
+
+  .header-actions {
+    flex-wrap: wrap;
+  }
+
+  .header-actions .button,
+  .header-actions a {
+    flex: 1 1 8rem;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .button[for="theme-toggle"] {
+    min-width: 0;
   }
 }
